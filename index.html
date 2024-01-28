@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fractal Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <label for="fractalType">Select Fractal Type:</label>
+      <select id="fractalType">
+        <option value="mandelbrot">Mandelbrot Set</option>
+        <option value="julia">Julia Set</option>
+        <option value="burningShip">Burning Ship</option>
+      </select>
+
+      <div id="parameters">
+        <label for="maxIterations">Max Iterations:</label>
+        <input type="number" id="maxIterations" value="100" />
+
+        <label for="juliaConstantRe">Julia Constant (Re):</label>
+        <input type="number" id="juliaConstantRe" value="-0.8" />
+
+        <label for="juliaConstantIm">Julia Constant (Im):</label>
+        <input type="number" id="juliaConstantIm" value="0.156" />
+      </div>
+
+      <button onclick="generateFractal()">Generate Fractal</button>
+      <canvas id="fractalCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
